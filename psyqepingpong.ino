@@ -3,13 +3,12 @@
   
   Author :
   	Shaunak Guha
-    Dept. of Physics,
-    St. Xavier's College, Kolkata
-    College ID : 18-500-5-05-0113
+    	Dept. of Physics,
+    	St. Xavier's College, Kolkata
     
   Contact :
   	Email : mr.shaunakguha@gmail.com
-    Phone : +91 9674384899
+	Github : github.com/psyqe
   
   Circuit Connections :
   
@@ -38,7 +37,7 @@
  	- wiper to LCD V0 pin
     
  * Further Instructions :
- 	- README.txt
+ 	- See README
     
  */
 
@@ -46,9 +45,9 @@
 #include <LiquidCrystal.h>
 
 //Variables
-int frate=200;
-byte posL=7, posR=6, paddleSize=5;
-byte maxPaddlePos = 16-paddleSize;
+int frate=200;	//Framerate
+byte posL=7, posR=6, paddleSize=5;	//Paddle size & position of both sides
+byte maxPaddlePos = 16-paddleSize;	//Paddle position limit
 
 //Direction of Movement of Ping-Pong Ball
 byte direction;
@@ -112,6 +111,9 @@ void setup() {
 	pinMode(A2, INPUT);
 	pinMode(A3, INPUT);
   
+	//Initiate pseudo-random generator
+	randomSeed(analogRead(A5));
+	
   	//Initial Default Direction
   	direction = random(4);
   
