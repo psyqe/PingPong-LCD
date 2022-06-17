@@ -23,7 +23,7 @@ Left mini-board for Player 1 with Up and Down buttons. Similar setup for the Pla
  	- R/W pin to ground
  	- VSS pin to ground
  	- VCC pin to +5V
-  - Backlight to +5V across 220ohm resistor
+   - Backlight to +5V across 220Ω resistor
     
  * 10K potentiometer :
  	- ends to +5V and ground
