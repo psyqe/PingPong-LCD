@@ -30,5 +30,5 @@ Left mini-board for Player 1 with Up and Down buttons. Similar setup for the Pla
  	- wiper to LCD V0 pin
     
 ### Motivation
-This project was my submission for IITB FOSSEE 2019 Screening Tasks.
+This project was my submission for IITB FOSSEE 2019 Screening Tasks. \
 Online simulation available at [Autodesk TinkerCAD](https://www.tinkercad.com/things/cL2SogHJobn?sharecode=Nf75LAH15eyD5xEGsSbnSdjyj0kpy9A-UC08TDohg8E)
