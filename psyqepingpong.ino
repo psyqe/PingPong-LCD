@@ -44,10 +44,14 @@
 // LCD Library
 #include <LiquidCrystal.h>
 
+//Dimensions of LCD
+short lengthLCD=16;
+short heightLCD=2;
+
 //Variables
 int frate=200;	//Framerate
 byte posL=7, posR=6, paddleSize=5;	//Paddle size & position of both sides
-byte maxPaddlePos = 16-paddleSize;	//Paddle position limit
+byte maxPaddlePos = lengthLCD-paddleSize;	//Paddle position limit
 
 //Direction of Movement of Ping-Pong Ball
 byte direction;
@@ -77,7 +81,13 @@ byte leftUp[8],leftDwn[8],rightUp[8],rightDwn[8];
 byte ball[8];
 
 // Initializing the LCD with interface pin connections
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+short pinRS = 12;
+short pinEnable = 11;
+short pinD4 = 5;
+short pinD5 = 4;
+short pinD6 = 3;
+short pinD7 = 2;
+LiquidCrystal lcd(pinRS, pinEnable, pinD4, pinD5, pinD6, pinD7);
 
 //Reading Button Input on demand
 //Left Player - Up Button
@@ -103,7 +113,7 @@ bool checkDwn2() {
 //Setup Function
 void setup() {
 	// Setting up the LCD's number of columns and rows
-	lcd.begin(16, 2);
+	lcd.begin(lengthLCD, heightLCD);
   
 	// Configuring input pins
 	pinMode(A0, INPUT);
